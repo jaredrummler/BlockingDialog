@@ -2,10 +2,10 @@
 
 Show a dialog from a background thread and wait for a result. Discussed on StackOverflow [here](http://stackoverflow.com/q/4381296/1048340) and [here](http://stackoverflow.com/q/2028697/1048340).
 
-<a target="_blank" href="https://developer.android.com/reference/android/os/Build.VERSION_CODES.html#HONEYCOMB"><img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" /></a>
-<a target="_blank" href="LICENSE"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
+<img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" />
+<a target="_blank" href="LICENSE.txt"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
 <a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog/badge.svg" alt="Maven Central" /></a>
-<a target="_blank" href="http://www.methodscount.com/?lib=com.jrummyapps%3Ablocking-dialog%3A1.0.0"><img src="https://img.shields.io/badge/methods-44-e91e63.svg" /></a>
+<img src="https://img.shields.io/badge/methods-20-e91e63.svg" />
 <a target="_blank" href="https://twitter.com/jrummyapps"><img src="https://img.shields.io/twitter/follow/jrummyapps.svg?style=social" /></a>
 
 ## Usage
@@ -38,7 +38,7 @@ public class YesOrNoDialog extends BlockingDialogFragment<String> {
 ```java
 public class MyTask extends AsyncTask<Void, Void, Void> {
 
-  WeakReference<Activity> weakReference;
+  WeakReference<Activity> weakActivity;
 
   ...
 
@@ -48,7 +48,7 @@ public class MyTask extends AsyncTask<Void, Void, Void> {
 
     // Need input from the  user.
     // Show the dialog from the UI thread and wait on this background thread for a result
-    Activity activity = weakReference.get();
+    Activity activity = weakActivity.get();
     String input = BlockingDialogManager.getInstance().showAndWait(activity, new YesOrNoDialog());
 
     if (input == null) {
