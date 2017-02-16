@@ -15,6 +15,7 @@ dependencies {
   testCompile 'junit:junit:4.12'
 }
 
+apply plugin: 'com.getkeepsafe.dexcount'
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
 
 android.libraryVariants.all { variant ->
