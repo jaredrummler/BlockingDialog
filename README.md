@@ -1,11 +1,77 @@
 ## Blocking Dialog
 
-Show a dialog from a background thread and wait for a result. Discussed on StackOverflow [here](http://stackoverflow.com/q/2028697/1048340) and [here](http://stackoverflow.com/q/4381296/1048340).
+Show a dialog from a background thread and wait for a result. Discussed on StackOverflow [here](http://stackoverflow.com/q/4381296/1048340) and [here](http://stackoverflow.com/q/2028697/1048340).
+
+<a target="_blank" href="https://developer.android.com/reference/android/os/Build.VERSION_CODES.html#HONEYCOMB"><img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" /></a>
+<a target="_blank" href="LICENSE"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
+<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog/badge.svg" alt="Maven Central" /></a>
+<a target="_blank" href="http://www.methodscount.com/?lib=com.jrummyapps%3Ablocking-dialog%3A1.0.0"><img src="https://img.shields.io/badge/methods-44-e91e63.svg" /></a>
+<a target="_blank" href="https://twitter.com/jrummyapps"><img src="https://img.shields.io/twitter/follow/jrummyapps.svg?style=social" /></a>
 
 ## Usage
 
-1. Create a dialog that extends `BlockingDialogFragment`
-2. Show the dialog from a worker thread using `BlockingDialogManager.showAndWait(activity, dialog)`
+**1.** Create a dialog that extends `BlockingDialogFragment`:
+
+```java
+public class YesOrNoDialog extends BlockingDialogFragment<String> {
+
+  @Override public Dialog onCreateDialog(Bundle savedInstanceState) {
+    return new AlertDialog.Builder(getActivity())
+        .setMessage("Do you like Taylor Swift?")
+        .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+          @Override public void onClick(DialogInterface dialog, int which) {
+            setResult("YES", false);
+          }
+        })
+        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+          @Override public void onClick(DialogInterface dialog, int which) {
+            setResult("NO", false);
+          }
+        })
+        .create();
+  }
+}
+```
+
+**2.** Show the dialog from a worker thread using `BlockingDialogManager#showAndWait`:
+
+```java
+public class MyTask extends AsyncTask<Void, Void, Void> {
+
+  WeakReference<Activity> weakReference;
+
+  ...
+
+  @Override protected Void doInBackground(Void... params) {
+
+    ...
+
+    // Need input from the  user.
+    // Show the dialog from the UI thread and wait on this background thread for a result
+    Activity activity = weakReference.get();
+    String input = BlockingDialogManager.getInstance().showAndWait(activity, new YesOrNoDialog());
+
+    if (input == null) {
+      // user cancelled
+    } else if (input.equals("YES")) {
+      // do something
+    }
+
+    return null;
+  }
+
+}
+```
+
+See the [demo](demo) project.
+
+## Download
+
+Download [the latest JAR](https://repo1.maven.org/maven2/com/jrummyapps/blocking-dialog/1.0.0/blocking-dialog-1.0.0.jar) or grab via Gradle:
+
+```groovy
+compile 'com.jrummyapps:blocking-dialog:1.0.0'
+```
 
 ## License
 
