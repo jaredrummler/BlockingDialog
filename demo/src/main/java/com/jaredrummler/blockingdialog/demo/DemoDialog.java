@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 JRummy Apps Inc.
+ * Copyright (C) 2017 Jared Rummler
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jrummyapps.blockingdialog.demo;
+package com.jaredrummler.blockingdialog.demo;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -24,7 +24,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import com.jrummyapps.blockingdialog.BlockingDialogFragment;
+import com.jaredrummler.blockingdialog.BlockingDialogFragment;
 
 public class DemoDialog extends BlockingDialogFragment<String> {
 

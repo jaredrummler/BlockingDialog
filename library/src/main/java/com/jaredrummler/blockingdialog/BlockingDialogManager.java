@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 JRummy Apps Inc.
+ * Copyright (C) 2017 Jared Rummler
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jrummyapps.blockingdialog;
+package com.jaredrummler.blockingdialog;
 
 import android.app.Activity;
 import android.os.Handler;

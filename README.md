@@ -4,9 +4,9 @@ Show a dialog from a background thread and wait for a result. Discussed on Stack
 
 <img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" />
 <a target="_blank" href="LICENSE.txt"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
-<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jrummyapps/blocking-dialog/badge.svg" alt="Maven Central" /></a>
+<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog/badge.svg" alt="Maven Central" /></a>
 <img src="https://img.shields.io/badge/methods-20-e91e63.svg" />
-<a target="_blank" href="https://twitter.com/jrummyapps"><img src="https://img.shields.io/twitter/follow/jrummyapps.svg?style=social" /></a>
+<a target="_blank" href="https://twitter.com/jaredrummler"><img src="https://img.shields.io/twitter/follow/jaredrummler.svg?style=social" /></a>
 
 ## Usage
 
@@ -67,15 +67,15 @@ See the [demo](demo) project.
 
 ## Download
 
-Download [the latest JAR](https://repo1.maven.org/maven2/com/jrummyapps/blocking-dialog/1.0.0/blocking-dialog-1.0.0.jar) or grab via Gradle:
+Download [the latest JAR](https://repo1.maven.org/maven2/com/jaredrummler/blocking-dialog/1.0.0/blocking-dialog-1.0.0.jar) or grab via Gradle:
 
 ```groovy
-compile 'com.jrummyapps:blocking-dialog:1.0.0'
+compile 'com.jaredrummler:blocking-dialog:1.0.0'
 ```
 
 ## License
 
-    Copyright 2017 JRummy Apps Inc.
+    Copyright 2017 Jared Rummler
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

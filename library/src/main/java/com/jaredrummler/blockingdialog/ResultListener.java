@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 JRummy Apps Inc.
+ * Copyright (C) 2017 Jared Rummler
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,20 +14,23 @@
  * limitations under the License.
  */
 
-package com.jrummyapps.blockingdialog;
-
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+package com.jaredrummler.blockingdialog;
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Callback that is invoked from a {@link BlockingDialogFragment}
  *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * @param <Result>
+ *     The expected result from the dialog
  */
-public class ExampleUnitTest {
-  @Test
-  public void addition_isCorrect() throws Exception {
-    assertEquals(4, 2 + 2);
-  }
+public interface ResultListener<Result> {
+
+  /**
+   * Called when a result is set from a {@link BlockingDialogFragment}
+   *
+   * @param result
+   *     The result. Usually the user input from interacting with a dialog.
+   * @param cancelled
+   *     {@code true} if the dialog was cancelled
+   */
+  void onResult(Result result, boolean cancelled);
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 JRummy Apps Inc.
+ * Copyright (C) 2017 Jared Rummler
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.jrummyapps.blockingdialog.demo;
+package com.jaredrummler.blockingdialog.demo;
 
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.Toast;
-import com.jrummyapps.blockingdialog.BlockingDialogManager;
-import com.jrummyapps.blockingdialog.ResultListener;
+import com.jaredrummler.blockingdialog.BlockingDialogManager;
+import com.jaredrummler.blockingdialog.ResultListener;
 import java.lang.ref.WeakReference;
 
 public class DemoTask extends AsyncTask<Void, Void, String> implements ResultListener<String> {
