@@ -2,11 +2,7 @@
 
 Show a dialog from a background thread and wait for a result. Discussed on StackOverflow [here](http://stackoverflow.com/q/4381296/1048340) and [here](http://stackoverflow.com/q/2028697/1048340).
 
-<img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" />
-<a target="_blank" href="LICENSE.txt"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
-<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog/badge.svg" alt="Maven Central" /></a>
-<img src="https://img.shields.io/badge/methods-20-e91e63.svg" />
-<a target="_blank" href="https://twitter.com/jaredrummler"><img src="https://img.shields.io/twitter/follow/jaredrummler.svg?style=social" /></a>
+<img src="https://img.shields.io/badge/API-11%2B-blue.svg?style=flat" alt="API" /> <a target="_blank" href="LICENSE.txt"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a> <a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog"><img src="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/blocking-dialog/badge.svg" alt="Maven Central" /></a> <img src="https://img.shields.io/badge/methods-20-e91e63.svg" /> <a target="_blank" href="https://twitter.com/jaredrummler"><img src="https://img.shields.io/twitter/follow/jaredrummler.svg?style=social" /></a>
 
 ## Usage
 
